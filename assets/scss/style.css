@@ -919,49 +919,52 @@ button, input, select textarea, li, div {
     line-height: 119%;
   }
 }
-.about-text ul {
+.about-text__item {
   gap: 30px;
 }
 @media screen and (max-width: 1399px) {
-  .about-text ul {
+  .about-text__item {
     gap: 10px;
   }
 }
 @media screen and (max-width: 1199px) {
-  .about-text ul {
+  .about-text__item {
     padding-bottom: 10px;
   }
 }
 @media screen and (max-width: 991px) {
-  .about-text ul {
+  .about-text__item {
     gap: 0px;
     line-height: 14px;
   }
 }
-.about-text ul li {
+.about-text__item li {
   width: 100%;
   font-weight: 400;
   font-size: 18px;
   line-height: 120%;
 }
 @media screen and (max-width: 1199px) {
-  .about-text ul li {
+  .about-text__item li {
     font-size: 14px;
   }
 }
 @media screen and (max-width: 991px) {
-  .about-text ul li {
+  .about-text__item li {
     font-size: 12px;
     display: inline;
   }
 }
-.about-text ul li:nth-child(1) {
+.about-text__item li:nth-child(1) {
   padding-left: 15px;
 }
 @media screen and (max-width: 1199px) {
-  .about-text ul li:nth-child(1) {
+  .about-text__item li:nth-child(1) {
     padding-left: 0;
   }
+}
+.about-text .main-select__list li {
+  padding: 0 !important;
 }
 
 .benefit {

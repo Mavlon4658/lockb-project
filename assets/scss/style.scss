@@ -893,7 +893,7 @@ button, input, select textarea, li, div {
             }
         }
 
-        ul {
+        &__item {
             gap: 30px;
 
             @include media(1399) {
@@ -932,6 +932,10 @@ button, input, select textarea, li, div {
                     }
                 }
             }
+        }
+
+        .main-select__list li {
+            padding: 0 !important;
         }
     }
 }
