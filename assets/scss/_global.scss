@@ -1,0 +1,38 @@
+// 
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+$font-manrope: "Manrope", sans-serif;
+$font-roboto: "Roboto", sans-serif;
+// Fonts end
+
+// Colors
+$color-bg-light: #FFFFFF;
+$color-bg-dark: linear-gradient(90deg, #0f1b46 17.86%, #1a2f79 52.4%, #2542ac 100%);
+$color-text-dark: #0D1424;
+$color-text-light: #FFFFFF;
+$color-text-secondary: #5E75AF;
+$color-text-blue: #3772FE;
+$color-fill-light: #FFFFFF;
+$color-fill-dark: #0D1424;
+$color-fill-blue: #3772FE;
+$color-fill-dark_blue: #0F1B46;
+$color-fill-gradient_stroke_light: linear-gradient(0deg, #62aaff 31.69%, #0d1424 91.83%);
+$color-fill-gradient_stroke_dark: linear-gradient(180deg, #3772fe 11.93%, #c2deff 93.25%);
+$color-fill-plaque: #05113C;
+$color-fill-small_plague: #16265D;
+$color-dark_gradient: linear-gradient(180deg, #16265d 28.1%, #0f1b46 75.3%);
+$color-light_gradient: linear-gradient(180deg, #fff 28.1%, #c2deff 75.3%);
+// Colors end
+
+@mixin media($value) {
+    @if ($value < 0) {
+        @media screen and (min-width: calc($value * (-1)) + 'px') {
+            @content;
+        }
+
+    } @else {
+        @media screen and (max-width: $value + 'px') {
+            @content;
+        }
+    }
+}
