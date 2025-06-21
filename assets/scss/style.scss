@@ -112,6 +112,10 @@ button, input, select textarea, li, div {
                 display: block;
             }
         }
+
+        a:hover {
+            color: $color-fill-blue;
+        }
     }
 }
 
@@ -1483,6 +1487,7 @@ button, input, select textarea, li, div {
         font-weight: 400;
         font-size: 16px;
         line-height: 120%;
+        transition: .2s ease-in-out all;
 
         @include media(1199) {
             font-size: 14px;
@@ -1491,6 +1496,10 @@ button, input, select textarea, li, div {
 
         @include media(991) {
             font-size: 12px;
+        }
+
+        &:hover {
+            color: $color-text-secondary;
         }
     }
 
@@ -1567,6 +1576,10 @@ button, input, select textarea, li, div {
             @include media(991) {
                 font-size: 12px;
                 line-height: 80%;
+            }
+
+            &:hover {
+                color: white;
             }
         }
     }

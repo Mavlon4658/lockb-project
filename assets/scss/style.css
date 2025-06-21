@@ -151,6 +151,9 @@ button, input, select textarea, li, div {
 .dark-theme .footer-logo img:nth-child(2) {
   display: block;
 }
+.dark-theme .footer a:hover {
+  color: #3772FE;
+}
 
 .container {
   max-width: 1400px;
@@ -1521,6 +1524,7 @@ button, input, select textarea, li, div {
   font-weight: 400;
   font-size: 16px;
   line-height: 120%;
+  transition: 0.2s ease-in-out all;
 }
 @media screen and (max-width: 1199px) {
   .footer a {
@@ -1532,6 +1536,9 @@ button, input, select textarea, li, div {
   .footer a {
     font-size: 12px;
   }
+}
+.footer a:hover {
+  color: #5E75AF;
 }
 .footer li {
   display: flex;
@@ -1609,4 +1616,7 @@ button, input, select textarea, li, div {
     font-size: 12px;
     line-height: 80%;
   }
+}
+.footer-bottom a:hover {
+  color: white;
 }/*# sourceMappingURL=style.css.map */
