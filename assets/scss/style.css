@@ -1396,6 +1396,7 @@ button, input, select textarea, li, div {
 @media screen and (max-width: 991px) {
   .faq .accordion {
     max-width: 100%;
+    width: 100%;
   }
 }
 .faq .accordion-item {

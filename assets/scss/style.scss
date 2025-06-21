@@ -1349,6 +1349,7 @@ button, input, select textarea, li, div {
 
         @include media(991) {
             max-width: 100%;
+            width: 100%;
         }
 
         &-item {
