@@ -16,22 +16,27 @@ if (phoneInp.length) {
     });
 }
 
-const selectLangBtn = document.querySelector('.select-lang__btn');
-const selectLangList = document.querySelectorAll('.select-lang__list li');
+const selectLang = document.querySelectorAll('.select-lang');
 
-if (selectLangList.length) {
-    selectLangList.forEach(el => {
-        el.onclick = () => {
-            selectLangBtn.querySelector('input').value = el.textContent;
-            selectLangBtn.querySelector('span').textContent = el.textContent;
-            selectLangList.forEach(a => {
-                if (a == el) {
-                    a.classList.add('selected');
-                } else {
-                    a.classList.remove('selected');
-                }
-            })
-        }
+if (selectLang.length) {
+    selectLang.forEach(lang => {
+        const selectLangBtn = lang.querySelector('.select-lang__btn');
+        const selectLangList = lang.querySelectorAll('.select-lang__list li');
+        
+        selectLangList.forEach(el => {
+            el.onclick = () => {
+                selectLangBtn.querySelector('input').value = el.textContent;
+                if (selectLangBtn.querySelector('.pk-text')) selectLangBtn.querySelector('.pk-text').textContent = el.textContent;
+                if (selectLangBtn.querySelector('.mb-text')) selectLangBtn.querySelector('.mb-text').textContent = el.textContent[0] + el.textContent[1];
+                selectLangList.forEach(a => {
+                    if (a == el) {
+                        a.classList.add('selected');
+                    } else {
+                        a.classList.remove('selected');
+                    }
+                })
+            }
+        })
     })
 }
 
