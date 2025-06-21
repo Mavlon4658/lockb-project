@@ -22,6 +22,10 @@ if (selectLang.length) {
     selectLang.forEach(lang => {
         const selectLangBtn = lang.querySelector('.select-lang__btn');
         const selectLangList = lang.querySelectorAll('.select-lang__list li');
+
+        selectLangBtn.onclick = () => {
+            lang.classList.toggle('active');
+        }
         
         selectLangList.forEach(el => {
             el.onclick = () => {
@@ -35,10 +39,23 @@ if (selectLang.length) {
                         a.classList.remove('selected');
                     }
                 })
+                lang.classList.remove('active');
             }
         })
     })
 }
+
+const target = document.querySelector('#myTarget')
+
+document.addEventListener('click', (event) => {
+    if (selectLang.length) {
+        selectLang.forEach(el => {
+            if (!event.composedPath().includes(el)) {
+                el.classList.remove('active');
+            }
+        })
+    }
+})
 
 const menu = document.querySelector('.menu');
 const headerBars = document.querySelector('.header-bars');
