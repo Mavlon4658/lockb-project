@@ -45,12 +45,28 @@ if (selectLang.length) {
     })
 }
 
-const target = document.querySelector('#myTarget')
+const mainSelects = document.querySelectorAll('.main-select');
+if (mainSelects.length) {
+    mainSelects.forEach(el => {
+        const btn = el.querySelector('.main-select__btn');
+        btn.onclick = () => {
+            el.classList.toggle('active');
+        }
+    })
+}
 
 document.addEventListener('click', (event) => {
     if (selectLang.length) {
         selectLang.forEach(el => {
-            if (!event.composedPath().includes(el)) {
+            if (!el.contains(event.target)) {
+                el.classList.remove('active');
+            }
+        })
+    }
+
+    if (mainSelects.length) {
+        mainSelects.forEach(el => {
+            if (!el.contains(event.target)) {
                 el.classList.remove('active');
             }
         })

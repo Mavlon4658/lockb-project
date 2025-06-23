@@ -306,30 +306,26 @@ button, input, select textarea, li, div {
         gap: 15px;
         display: none;
         flex-direction: column;
+        z-index: 3;
 
         @include media(575) {
-            left: 50%;
-            transform: translate(-50%, 100%);
-            text-align: left !important;
-            gap: 10px;
-            padding: 10px;
-            border-radius: 10px;
-        }
-
-        &::before {
-            content: "";
-            position: absolute;
             left: 0;
-            top: -20px;
-            height: 30px;
-            width: 193px;
-            background: transparent;
+            text-align: left !important;
+            gap: 15px;
+            padding: 20px;
+            border-radius: 20px;
         }
 
         li {
             display: flex;
             width: 100%;
             align-items: center;
+
+            &:not(:nth-child(n+3)) {
+                @include media(991) {
+                    display: none !important;
+                }
+            }
         }
 
         a {
@@ -350,10 +346,8 @@ button, input, select textarea, li, div {
         }
     }
 
-    &:hover {
-        .main-select__list {
-            display: flex;
-        }
+    &.active .main-select__list {
+        display: flex;
     }
 }
 
